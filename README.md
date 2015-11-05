@@ -1,5 +1,5 @@
-Quiver
-======
+Quiver strings
+==============
 
 A set of string utilities for Dart.
 
