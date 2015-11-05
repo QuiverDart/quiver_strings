@@ -1,15 +1,14 @@
 Quiver
 ======
 
-Quiver is a set of utility libraries for Dart that makes using many Dart
-libraries easier and more convenient, or adds additional functionality.
+A set of string utilities for Dart.
 
 [![Build Status](https://travis-ci.org/QuiverDart/quiver_strings.svg?branch=master)](https://travis-ci.org/QuiverDart/quiver_strings)
 [![Coverage Status](https://img.shields.io/coveralls/QuiverDart/quiver_strings.svg)](https://coveralls.io/r/QuiverDart/quiver_strings)
 
 [API Docs](http://www.dartdocs.org/documentation/quiver_strings/latest) are available.
 
-## [quiver.strings][]
+## Documentation
 
 `isBlank` checks if a string is `null`, empty or made of whitespace characters.
 

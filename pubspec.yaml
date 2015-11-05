@@ -11,7 +11,7 @@ authors:
 - Günter Zöchbauer <guenter@gzoechbauer.com>
 - Sean Eagan <seaneagan1@gmail.com>
 - Victor Berchet <victor@suumit.com>
-description: A set of utility libraries for Dart
+description: A set of string utilities for Dart
 homepage: https://github.com/google/quiver-dart
 environment:
   sdk: '>=1.8.0 <2.0.0'
