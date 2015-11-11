@@ -22,7 +22,7 @@ bool isBlank(String s) => s == null || s.trim().isEmpty;
 bool isEmpty(String s) => s == null || s.isEmpty;
 
 /// Returns a string with characters from the given [s] in reverse order.
-String flip(String s) {
+String reverse(String s) {
   if (s == null || s == '') return s;
   StringBuffer sb = new StringBuffer();
   var runes = s.runes;
@@ -63,7 +63,7 @@ String loop(String s, int from, [int to]) {
     throw new ArgumentError('Input string cannot be null or empty');
   }
   if (to != null && to < from) {
-    return loop(flip(s), -from, -to);
+    return loop(reverse(s), -from, -to);
   }
   int len = s.length;
   int leftFrag = from >= 0 ? from ~/ len : ((from - len) ~/ len);
