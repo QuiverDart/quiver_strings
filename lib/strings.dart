@@ -38,22 +38,6 @@ String nullToEmpty(String s) => s == null ? '' : s;
 /// Returns `null` if [s] is empty, otherwise returns [s] as is.
 String emptyToNull(String s) => s == '' ? null : s;
 
-/// Concatenates [s] to itself a given number of [times]. Empty and null
-/// strings will always result in empty and null strings respectively no matter
-/// how many [times] they are [repeat]ed.
-///
-/// If [times] is negative, returns the [flip]ped string repeated given number
-/// of [times].
-String repeat(String s, int times) {
-  if (s == null || s == '') return s;
-  if (times < 0) {
-    return repeat(flip(s), -times);
-  }
-  StringBuffer sink = new StringBuffer();
-  _repeat(sink, s, times);
-  return sink.toString();
-}
-
 /// Loops over [s] and returns traversed characters. Takes arbitrary [from] and
 /// [to] indices. Works as a substitute for [String.substring], except it never
 /// throws [RangeError]. Supports negative indices. Think of an index as a
@@ -91,16 +75,10 @@ String loop(String s, int from, [int to]) {
   if (fragOffset == -1) {
     return s.substring(from - leftFrag * len, to - rightFrag * len);
   }
-  StringBuffer sink = new StringBuffer(s.substring(from - leftFrag * len));
-  _repeat(sink, s, fragOffset);
-  sink.write(s.substring(0, to - rightFrag * len));
-  return sink.toString();
-}
-
-void _repeat(StringBuffer sink, String s, int times) {
-  for (int i = 0; i < times; i++) {
-    sink.write(s);
-  }
+  var buf = new StringBuffer(s.substring(from - leftFrag * len))
+      ..write(s * fragOffset)
+      ..write(s.substring(0, to - rightFrag * len));
+  return buf.toString();
 }
 
 /// Returns `true` if [rune] represents a whitespace character.
