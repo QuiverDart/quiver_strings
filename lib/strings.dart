@@ -227,7 +227,7 @@ bool isWhitespace(int rune) => ((rune >= 0x0009 && rune <= 0x000D) ||
  * If there are an odd number of characters to pad, then the right will be
  * padded with one more than the left.
  */
-String center(String input, int width, String fill) {
+String center(String input, int width, [String fill = ' ']) {
   if (fill == null || fill.length == 0) {
     throw new ArgumentError('fill cannot be null or empty');
   }

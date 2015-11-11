@@ -250,6 +250,10 @@ main() {
   });
 
   group('center', () {
+    test('should fill with 0x20 space by default', () {
+      expect(center('abc', 7), '  abc  ');
+    });
+
     test('should return the input if length greater than width', () {
       expect(center('abc', 2, '0'), 'abc');
       expect(center('abc', 3, '0'), 'abc');
