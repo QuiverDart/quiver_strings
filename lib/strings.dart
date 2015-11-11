@@ -76,8 +76,8 @@ String loop(String s, int from, [int to]) {
     return s.substring(from - leftFrag * len, to - rightFrag * len);
   }
   var buf = new StringBuffer(s.substring(from - leftFrag * len))
-      ..write(s * fragOffset)
-      ..write(s.substring(0, to - rightFrag * len));
+    ..write(s * fragOffset)
+    ..write(s.substring(0, to - rightFrag * len));
   return buf.toString();
 }
 
