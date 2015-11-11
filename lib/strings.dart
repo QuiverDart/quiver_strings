@@ -228,12 +228,11 @@ bool isWhitespace(int rune) => ((rune >= 0x0009 && rune <= 0x000D) ||
  * padded with one more than the left.
  */
 String center(String input, int width, [String fill = ' ']) {
-  if (fill == null || fill.length == 0) {
-    throw new ArgumentError('fill cannot be null or empty');
+  if (fill?.length != 1) {
+    throw new ArgumentError('fill must be exactly 1 character');
   }
-  if (input == null) input = '';
-  var leftWidth = input.length + (width - input.length) ~/ 2;
-  return padRight(padLeft(input, leftWidth, fill), width, fill);
+  var leftWidth = (width - input.length) ~/ 2;
+  return input.padLeft(leftWidth + input.length, fill).padRight(width, fill);
 }
 
 /**

@@ -269,17 +269,10 @@ main() {
       expect(center('abc', 8, '0'), '00abc000');
     });
 
-    test('should use multi-character fills', () {
-      expect(center('abc', 7, '012345'), '01abc45');
-      expect(center('abc', 6, '012345'), '0abc45');
-      expect(center('abc', 9, '01'), '010abc101');
-    });
-
-    test('should handle null and empty inputs', () {
-      expect(center(null, 4, '012345'), '0145');
-      expect(center('', 4, '012345'), '0145');
-      expect(center(null, 5, '012345'), '01345');
-      expect(center('', 5, '012345'), '01345');
+    test('should throw ArgumentError if fill is not a 1-char string', () {
+      expect(() => center('abc', 8, null), throwsArgumentError);
+      expect(() => center('abc', 8, ''), throwsArgumentError);
+      expect(() => center('abc', 8, '00'), throwsArgumentError);
     });
   });
 
