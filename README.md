@@ -6,9 +6,9 @@ A set of string utilities for Dart.
 [![Build Status](https://travis-ci.org/QuiverDart/quiver_strings.svg?branch=master)](https://travis-ci.org/QuiverDart/quiver_strings)
 [![Coverage Status](https://img.shields.io/coveralls/QuiverDart/quiver_strings.svg)](https://coveralls.io/r/QuiverDart/quiver_strings)
 
-[API Docs](http://www.dartdocs.org/documentation/quiver_strings/latest) are available.
-
 ## Documentation
+
+[API Docs](http://www.dartdocs.org/documentation/quiver_strings/latest)
 
 `isBlank` checks if a string is `null`, empty or made of whitespace characters.
 
