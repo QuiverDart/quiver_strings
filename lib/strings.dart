@@ -21,6 +21,12 @@ bool isBlank(String s) => s == null || s.trim().isEmpty;
 /// Returns `true` if [s] is null or empty.
 bool isEmpty(String s) => s == null || s.isEmpty;
 
+/// Returns `true` if [rune] represents a digit.
+///
+/// The definition of digit matches the Unicode `0x3?` range of Western European
+/// digits.
+bool isDigit(int rune) => rune ^ 0x30 <= 9;
+
 /// Returns a string with characters from the given [s] in reverse order.
 String reverse(String s) {
   if (s == null || s == '') return s;
