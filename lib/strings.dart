@@ -21,6 +21,9 @@ bool isBlank(String s) => s == null || s.trim().isEmpty;
 /// Returns `true` if [s] is null or empty.
 bool isEmpty(String s) => s == null || s.isEmpty;
 
+/// Returns `true` if [s] is a non-empty string.
+bool isNotEmpty(String s) => s != null && s.isNotEmpty;
+
 /// Returns `true` if [rune] represents a digit.
 ///
 /// The definition of digit matches the Unicode `0x3?` range of Western European
