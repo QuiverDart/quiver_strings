@@ -14,6 +14,8 @@ A set of string utilities for Dart.
 
 `isEmpty` checks if a string is `null` or empty.
 
+`isNotEmpty` checks if a string is not `null` and not empty.
+
 `equalsIgnoreCase` checks if two strings are equal, ignoring case.
 
 `compareIgnoreCase` compares two strings, ignoring case.
