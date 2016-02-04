@@ -21,7 +21,7 @@ bool isBlank(String s) => s == null || s.trim().isEmpty;
 /// Returns `true` if [s] is null or empty.
 bool isEmpty(String s) => s == null || s.isEmpty;
 
-/// Returns `true` if [s] is a not empty string.
+/// Returns `true` if [s] is a non-empty string.
 bool isNotEmpty(String s) => s != null && s.isNotEmpty;
 
 /// Returns `true` if [rune] represents a digit.
