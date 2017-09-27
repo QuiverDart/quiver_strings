@@ -20,7 +20,7 @@ A set of string utilities for Dart.
 
 `compareIgnoreCase` compares two strings, ignoring case.
 
-`flip` flips the order of characters in a string.
+`reverse` reverses the order of characters in a string.
 
 `nullToEmpty` turns `null` to empty string, and returns non-empty strings
 unchanged.
