@@ -28,8 +28,6 @@ unchanged.
 `emptyToNull` turns empty string to `null`, and returns non-empty strings
 unchanged.
 
-`repeat` concatenates a string to itself a given number of times.
-
 `loop` allows you to loop through characters in a string starting and ending at
 arbitrary indices. Out of bounds indices allow you to wrap around the string,
 supporting a number of use-cases, including:
